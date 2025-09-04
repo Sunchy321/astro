@@ -1,8 +1,15 @@
 {
-    "$schema": "node_modules/wrangler/config-schema.json",
-    "name": "tcg-cards",
-    "compatibility_date": "2025-09-04",
-    "assets": {
-        "directory": "./dist",
-    }
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "tcg-cards",
+	"compatibility_date": "2025-09-04",
+	"assets": {
+		"directory": "./dist",
+	},
+	"d1_databases": [
+		{
+			"binding": "AUTH_DATABASE",
+			"database_name": "auth",
+			"database_id": "3913e792-c082-4406-a9e7-de8006baeba3"
+		}
+	]
 }

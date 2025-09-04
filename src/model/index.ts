@@ -1,3 +1,3 @@
-import zod from 'zod';
+export const games = ['magic'] as const;
 
-export const games = zod.enum(['magic']);
+export type Game = (typeof games)[number];
