@@ -4,11 +4,16 @@ import tailwindcss from '@tailwindcss/vite';
 
 import cloudflare from '@astrojs/cloudflare';
 
+import svelte from '@astrojs/svelte';
+
 // https://astro.build/config
 export default defineConfig({
     adapter: cloudflare(),
     site:    'https://tcg.cards',
-    vite:    {
+
+    vite: {
         plugins: [tailwindcss()],
     },
+
+    integrations: [svelte()],
 });
