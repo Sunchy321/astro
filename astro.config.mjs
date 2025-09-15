@@ -16,4 +16,8 @@ export default defineConfig({
     },
 
     integrations: [svelte()],
+
+    build: {
+        inlineStylesheets: 'never',
+    },
 });
