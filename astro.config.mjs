@@ -2,20 +2,19 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-import cloudflare from '@astrojs/cloudflare';
-
 import svelte from '@astrojs/svelte';
+
+import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-    adapter: cloudflare(),
-    site:    'https://tcg.cards',
+    site: 'https://tcg.cards',
 
     vite: {
         plugins: [tailwindcss()],
     },
 
-    integrations: [svelte()],
+    integrations: [svelte(), icon()],
 
     build: {
         inlineStylesheets: 'never',

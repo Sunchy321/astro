@@ -1,11 +1,12 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from '@/layouts/Layout.astro';
+import { Input } from '@/components/ui/input';
 ---
 
 <Layout>
-	<Welcome />
+    <main class="min-h-screen flex justify-center p-4 pt-[150px] bg-[radial-gradient(circle_at_30%_30%,theme(colors.primary/.15),transparent_70%)]">
+        <div class="w-3/5 space-y-4">
+            <Input class="h-14 text-2xl leading-tight px-3 py-2" />
+        </div>
+    </main>
 </Layout>
