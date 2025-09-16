@@ -1,10 +1,13 @@
 ---
-export function getStaticPaths() {
-    return [
-        { params: { game: 'magic' } },
-        { params: { game: 'hearthstone' } },
-    ];
-}
----
+import Game from '@/layouts/Game.astro';
 
-<div></div>
+import { games } from '@/model';
+
+export function getStaticPaths() {
+    return games.map(game => ({ params: { game } }));
+}
+
+---
+<Game>
+
+</Game>

@@ -1,12 +1,16 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import { Input } from '@/components/ui/input';
+import { Input } from 'flowbite-svelte';
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout>
-    <main class="min-h-screen flex justify-center p-4 pt-[150px] bg-[radial-gradient(circle_at_30%_30%,theme(colors.primary/.15),transparent_70%)]">
+    <main class="min-h-screen flex justify-center p-4 pt-[150px]">
         <div class="w-3/5 space-y-4">
-            <Input class="h-14 text-2xl leading-tight px-3 py-2" />
+            <Input type="text" class="h-14 text-2xl">
+                <Icon name="mdi:magnify" class="size-6" slot="left" />
+                <Icon name="mdi:close" class="size-6" slot="right" />
+            </Input>
         </div>
     </main>
 </Layout>

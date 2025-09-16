@@ -1,0 +1,20 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { Button } from 'flowbite-svelte';
+import { Icon } from 'astro-icon/components';
+
+---
+<Layout>
+    <Button
+        slot="game"
+        aria-label={Astro.params.game}
+        size="md"
+        pill={true}
+        href={`/${Astro.params.game}`}
+        class="p-2!"
+    >
+        <Icon name={`${Astro.params.game}/logo`} class="size-6" />
+    </Button>
+    <slot name="title" slot="title">{Astro.params.game}</slot>
+    <slot />
+</Layout>

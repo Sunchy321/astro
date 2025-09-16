@@ -46,6 +46,8 @@ export default defineConfig([
                 allowSingleLine: true,
             }],
 
+            '@stylistic/jsx-indent-props': ['warn', 4],
+
             '@stylistic/indent': ['warn', 4, {
                 SwitchCase: 0,
             }],
